@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-image: linear-gradient(
+    120deg,
+    rgb(161, 239, 253),
+    rgb(129, 248, 206)
+  );
+  color: rgb(29, 123, 108);
+  font-family: poppins;
+  min-height: 20rem;
+}
+
+header {
+  font-size: 1.2rem;
+  margin-top: 7rem;
+}
+
+header,
+form {
+  min-height: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+form input,
+form button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background: white;
+}
+
+input:focus {
+  border-color: #4bf6d9;
+  box-shadow: 0 0 15px rgba(11, 154, 113, 0.5);
+  outline: none;
+  transition: all 0.7s ease;
+}
+
+form button {
+  color: rgb(5, 164, 103);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background: rgb(22, 81, 58);
+  color: rgb(129, 248, 206);
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 18rem;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: rgb(94, 163, 141);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+  background: rgb(230, 87, 10);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+
+.complete-btn {
+  background: rgb(5, 164, 103);
+}
+.todo-item {
+  padding: 0rem 0.8rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotate(20deg);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+select {
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: rgb(117, 113, 113);
+  font-family: poppins;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(4, 177, 24);
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: rgb(2, 99, 65);
+}
